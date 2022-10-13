@@ -3,12 +3,38 @@ const path = require('path');
 
 const app = express();
 
+const members = [
+  {
+    id: 1,
+    name: 'Abdul Saleh',
+    email: 'abdsaleh@gmail.com',
+    status: 'active',
+  },
+  {
+    id: 2,
+    name: 'Bimasakti Candra',
+    email: 'bimasakti@gmail.com',
+    status: 'inactive',
+  },
+  {
+    id: 3,
+    name: 'Maharaja Soewanto',
+    email: 'maharaja@gmail.com',
+    status: 'inactive',
+  },
+  {
+    id: 4,
+    name: 'Indira M. Ayughani',
+    email: 'ayughani@gmail.com',
+    status: 'active',
+  },
+];
+
+// Get All Members
+app.get('/api/members', (req, res) => res.json(members));
+
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
-
-// app.get('/', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
 
 const PORT = process.env.PORT || 5001;
 
