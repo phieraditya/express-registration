@@ -1,8 +1,9 @@
 <h1 class='text-center mb-3'>{{title}}</h1>
+
 <form action='/api/members' method='POST' class='mb-4'>
   <div class='mb-3'>
     <label for='name'>Name</label>
-    <input type='text' name="'name" class='form-control' />
+    <input type='text' name='name' class='form-control' />
   </div>
   <div class='mb-4'>
     <label for='email'>Email</label>
@@ -12,6 +13,7 @@
     <input type='submit' value='Add Member' class='btn btn-primary d-grid' />
   </div>
 </form>
+
 <h4>Members</h4>
 <ul class='list-group'>
   {{#each members}}

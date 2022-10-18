@@ -12,7 +12,7 @@ const app = express();
 // Handlebars Middleware
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-app.set('views', './views');
+// app.set('views', './views');
 
 // Body Parser Middleware
 app.use(express.json());
@@ -27,7 +27,7 @@ app.get('/', (req, res) =>
 );
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // Members API Routes
 app.use('/api/members', require('./routes/api/members'));
